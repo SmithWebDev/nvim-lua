@@ -48,6 +48,7 @@ set('o', 'autowrite', true)
 set('o', 'autowriteall', true)
 set('o', 'mouse', 'a')
 set('o', 'termguicolors', true)
+set('o', 't_Co', '256')
 
 -- Line Numbering --
 set('w', 'number', true)
