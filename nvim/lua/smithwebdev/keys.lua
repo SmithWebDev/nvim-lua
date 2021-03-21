@@ -20,18 +20,30 @@ map('i', 'jj', '<Esc>')
 map('i', 'jk', '<Esc>')
 map('i', 'kj', '<Esc>')
 
+-- Resize window panes
+-- =====================================
+map('n', '<up>', ':resize +2<CR>')
+map('n', '<down>', ':resize -2<CR>')
+map('n', '<left>', ':vertical resize +2<CR>')
+map('n', '<right>', ':vertical resize -2<CR>')
+
 -- Tabs
 -- =====================================
-map('n', '<leader>t=', '<cmd>-tabm<CR>')
-map('n', '<leader>t-', '<cmd>+tabm<CR>')
-map('n', '<leader>tc', '<cmd>tabc<CR>')
-map('n', '<leader>te', '<cmd>tabedit %<CR>')
-map('n', '<leader>th', '<cmd>tabfirst<CR>')
-map('n', '<leader>tj', '<cmd>tabnext<CR>')
-map('n', '<leader>tk', '<cmd>tabprev<CR>')
-map('n', '<leader>tl', '<cmd>tablast<CR>')
-map('n', '<leader>tn', ':tabnew<Space>')
-map('n', '<leader>tt', '<cmd>tabs<CR>')
+map('n', '<leader>t=', ':-tabm<CR>')
+map('n', '<leader>t-', ':+tabm<CR>')
+map('n', '<leader>tc', ':tabc<CR>')
+map('n', '<leader>te', ':tabedit %<CR>')
+map('n', '<leader>th', ':tabfirst<CR>')
+map('n', '<leader>tj', ':tabnext<CR>')
+map('n', '<leader>tk', ':tabprev<CR>')
+map('n', '<leader>tl', ':tablast<CR>')
+map('n', '<leader>tn', ':tabnew')
+map('n', '<leader>tt', ':tabs<CR>')
+
+-- Tabs
+-- =====================================
+map('n', '<M-j>', [[mz:m+<CR>`z]])
+
 
 -- Window Navigation
 -- =====================================
@@ -49,8 +61,9 @@ map('n', '<leader>q', '<C-w>q')
 
 -- VIM commands
 -- =====================================
-map('n', '<leader>vc', '<cmd>e $VIMC/configs<CR>')
-map('n', '<leader>vi', '<cmd>luafile $VIM/init.lua<CR>')
-map('n', '<leader>vm', '<cmd>e $VIMC/keys<CR>')
-map('n', '<leader>vr', '<cmd>luafile %<CR>')
+map('n', '<leader>va', ':e $VIMA<CR>')
+map('n', '<leader>vc', ':e $VIMC<CR>')
+map('n', '<leader>vi', ':luafile $VIM/init.lua<CR>')
+map('n', '<leader>vm', ':e $VIMM<CR>')
+map('n', '<leader>vr', ':luafile %<CR>')
 
