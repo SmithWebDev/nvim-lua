@@ -5,10 +5,11 @@
 local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
 local function set(scope, key, value)
 	scopes[scope][key] = value
-	--if scope ~= 'o' then scopes['o'][key] = value end
+	if scope ~= 'o' then ['o'][scope][key] = value end
 end
 
---==============================================================================
+
+-- =============================================================================
 
 -- Completion Options --
 set('o', 'completeopt', 'menuone,noinsert,noselect')
@@ -21,12 +22,11 @@ set('w', 'foldenable', false)
 set('w', 'foldlevel', 99)
 
 -- Indentation Options --
-local indent = 2
 set('b', 'expandtab', true)
-set('b', 'tabstop', indent)
-set('b', 'shiftwidth', indent)
+set('b', 'tabstop', 2)
+set('b', 'shiftwidth', 2)
 set('b', 'smartindent', true)
-set('b', 'softtabstop', indent)
+set('b', 'softtabstop', 2)
 
 -- Line Options --
 set('b', 'textwidth', 120)
@@ -39,7 +39,6 @@ set('w', 'listchars', 'tab:→ ,trail:·,extends:…,eol:↩')
 -- Search Options --
 set('o', 'ignorecase', true)
 set('o', 'smartcase', true)
-set('o', 'path', '+=**')
 set('o', 'wrapscan', true)
 
 -- File --
