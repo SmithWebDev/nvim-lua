@@ -15,7 +15,7 @@ set('o', 'completeopt', 'menuone,noinsert,noselect')
 set('o', 'updatetime', 3000)
 
 -- Fold Options --
-set('w', 'foldmethod', 'indent')
+set('wo', 'foldmethod', 'indent')
 set('w', 'foldnestmax', 3)
 set('w', 'foldenable', false)
 set('w', 'foldlevel', 99)

@@ -9,10 +9,11 @@ local function set_auto(name, cmds)
     acmd = acmd .. k .. ' '
   end
   acmd = acmd .. 'augroup END'
+  vim.api.nvim_exec(cmds, false)
 end
 -- =============================================================================
 
--- Automatically exit from Insert mode & 
+-- Automatically exit from Insert mode
 auto(
   [[
     augroup exitInsert
@@ -33,3 +34,7 @@ auto(
     augroup END
   ]], true
 )
+
+
+-- Attempts to refactor
+--set_auto('exitInsert', { 'au CursorHoldI * stopinsert InsertEnter * let updaterestore=&updatetime | set updatetime=3000 InsertLeave * let &updatetime=updaterestore'})
