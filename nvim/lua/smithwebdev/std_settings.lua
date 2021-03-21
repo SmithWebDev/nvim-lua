@@ -22,27 +22,22 @@ set('w', 'foldlevel', 99)
 
 -- Indentation Options --
 local indent = 2
-set('b', 'autoindent', true)
 set('b', 'expandtab', true)
 set('b', 'tabstop', indent)
 set('b', 'shiftwidth', indent)
 set('b', 'smartindent', true)
 set('b', 'softtabstop', indent)
-set('o', 'smarttab', true)
 
 -- Line Options --
 set('b', 'textwidth', 120)
 set('o', 'showbreak', '+++')
 set('o', 'scrolloff', 999)
-set('o', 'sidescroll', 1)
 set('o', 'sidescrolloff', 15)
 set('w', 'list', true)
 set('w', 'listchars', 'tab:→ ,trail:·,extends:…,eol:↩')
 
 -- Search Options --
-set('o', 'hlsearch', true)
 set('o', 'ignorecase', true)
-set('o', 'incsearch', true)
 set('o', 'smartcase', true)
 set('o', 'path', '+=**')
 set('o', 'wrapscan', true)
@@ -51,7 +46,6 @@ set('o', 'wrapscan', true)
 set('b', 'swapfile', false)
 set('o', 'autowrite', true)
 set('o', 'autowriteall', true)
-set('o', 'clipboard', '+=unnamedplus')
 set('o', 'mouse', 'a')
 set('o', 'termguicolors', true)
 
@@ -68,4 +62,3 @@ set('o', 'splitbelow', true)
 set('o', 'splitright', true)
 set('o', 'backup', false)
 set('o', 'writebackup', false)
-
