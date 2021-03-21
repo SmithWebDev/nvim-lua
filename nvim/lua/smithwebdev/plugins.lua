@@ -34,6 +34,10 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-refactor'
   use 'nvim-treesitter/playground'
 
+  -- Status Line and Bufferline
+  use 'glepnir/galaxyline.nvim'
+  use 'romgrk/barbar.nvim'
+
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
