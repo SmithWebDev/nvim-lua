@@ -34,6 +34,12 @@ auto(
     augroup END
   ]], true
 )
+--
+-- Auto compile when there are changes in plugins.lua
+--vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' 
+
+
+
 
 
 -- Attempts to refactor

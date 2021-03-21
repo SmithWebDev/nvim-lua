@@ -20,6 +20,13 @@ map('i', 'jj', '<Esc>')
 map('i', 'jk', '<Esc>')
 map('i', 'kj', '<Esc>')
 
+-- **Packer 
+-- =====================================
+map('n', '<leader>Pc', ':PackerClean<CR>' )
+map('n', '<leader>Pi', ':PackerInstall<CR>' )
+map('n', '<leader>Ps', ':PackerSync<CR>' )
+map('n', '<leader>Pu', ':PackerUpdate<CR>' )
+
 -- Resize window panes
 -- =====================================
 map('n', '<up>', ':resize +2<CR>')
