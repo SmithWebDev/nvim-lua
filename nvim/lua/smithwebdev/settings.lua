@@ -8,7 +8,8 @@ local w=vim.wo
 
 -- Completion Options --
 o.completeopt='menuone,noinsert,noselect'
-o.updatetime=3000
+o.updatetime=5000
+o.timeoutlen=3000
 
 -- Fold Options --
 w.foldmethod='indent'
@@ -25,7 +26,7 @@ b.softtabstop=2
 
 -- Line Options --
 b.textwidth=120
-o.listchars='tab:→ ,trail:·,extends:…,eol:↩'
+o.listchars='space:·,tab:→ ,trail:·,extends:…,eol:↩'
 o.showbreak='+++'
 o.scrolloff=999
 o.sidescrolloff=15
@@ -43,6 +44,8 @@ o.autowriteall=true
 o.mouse='a'
 o.termguicolors=true
 o.t_Co='256'
+o.undodir=vim.fn.stdpath('config')..'/undodir'
+o.undofile=true
 
 -- Line Numbering --
 w.number=true
@@ -59,4 +62,6 @@ o.backup=false
 o.writebackup=false
 o.clipboard='unnamedplus'
 
+
 vim.cmd('syntax on')
+vim.g.colors_name='gloombuddy'

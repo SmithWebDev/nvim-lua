@@ -1,3 +1,4 @@
+--local current_path = (...):gsub('%.init$', '')
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -9,48 +10,56 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
-  -- Packer as an optional plugin *precautionary*
+-- Packer as an optional plugin *precautionary*
   use 'wbthomason/packer.nvim'
-
-  -- Lua Guide Info
-  use 'nanotee/nvim-lua-guide'
-
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
-  use 'onsails/lspkind-nvim'
-  use 'kosayoda/nvim-lightbulb'
-
+--
+--  -- Lua Guide Info
+--  use 'nanotee/nvim-lua-guide'
+--
   -- AutoCompletion
-  use 'hrsh7th/nvim-compe'
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
-
-  -- FileType Snippets (VS-Code)
-  use 'rubyide/vscode-ruby'
-
-  -- Treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use 'nvim-treesitter/nvim-treesitter-refactor'
-  use 'nvim-treesitter/playground'
-
-  -- Status Line and Bufferline
-  use 'glepnir/galaxyline.nvim'
-  use 'romgrk/barbar.nvim'
-
-  -- Icons
-  use 'kyazdani42/nvim-web-devicons'
-  use 'ryanoasis/vim-devicons'
-
-  -- Telescope
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-telescope/telescope-fzy-native.nvim'
-  use 'nvim-telescope/telescope-media-files.nvim'
+--  use 'hrsh7th/nvim-compe'
+--  use 'hrsh7th/vim-vsnip'
+--  use 'hrsh7th/vim-vsnip-integ'
 
   -- Explorer
   use 'kyazdani42/nvim-tree.lua'
+
+  -- FileType Snippets (VS-Code)
+--  use 'rubyide/vscode-ruby'
+
+  -- LSP
+--  use 'neovim/nvim-lspconfig'
+--  use 'glepnir/lspsaga.nvim'
+--  use 'onsails/lspkind-nvim'
+--  use 'kosayoda/nvim-lightbulb'
+--  use 'kabouzeid/nvim-lspinstall'
+--  use 'nvim-lua/lsp-status.nvim'
+--  use 'creativenull/diagnosticls-nvim'--
+
+  -- Ruby/ Rails
+--  use 'tpope/vim-endwise'
+--  use 'tpope/vim-rails'
+  
+--  -- Treesitter
+--  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+--  use 'nvim-treesitter/nvim-treesitter-refactor'
+--  use 'nvim-treesitter/playground'
+--
+--  -- Status Line and Bufferline
+--  use 'glepnir/galaxyline.nvim'
+--  use 'romgrk/barbar.nvim'
+--
+--  -- Icons
+--  use 'kyazdani42/nvim-web-devicons'
+--  use 'ryanoasis/vim-devicons'
+--
+--  -- Telescope
+--  use 'nvim-telescope/telescope.nvim'
+--  use 'nvim-lua/plenary.nvim'
+--  use 'nvim-lua/popup.nvim'
+--  use 'nvim-telescope/telescope-fzy-native.nvim'
+--  use 'nvim-telescope/telescope-media-files.nvim'
+--
 
 --  -- Git
 --  use 'TimUntersberger/neogit'
@@ -71,8 +80,10 @@ return require('packer').startup(function(use)
 --  -- Registers
 --  use 'gennaro-tedesco/nvim-peekup'
 --
---  -- General Plugins
+  -- General Plugins
 --  use 'windwp/nvim-autopairs'
+--  use 'tjdevries/colorbuddy.nvim'
+--  use 'bkegley/gloombuddy'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'
@@ -92,5 +103,7 @@ return require('packer').startup(function(use)
 --  use 'phaazon/hop.nvim'
 --  use 'tpope/vim-sleuth'
 --  use 'sheerun/vim-polyglot'
-
 end)
+
+--require(current_path .. '.config.nv-tree')
+--print(current_path)
