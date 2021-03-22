@@ -1,8 +1,8 @@
 local utils = require 'smithwebdev.utils'
-
+local set = vim.g
 utils.keymap('n', '<leader>e', ':NvimTreeToggle<CR>')
 
-vim.g.nvim_tree_icons = {
+set.nvim_tree_icons = {
      default= '',
      symlink= '',
      git= {
