@@ -1,9 +1,7 @@
---local current_path = (...):gsub('%.init$', '')
+local current_path = (...):gsub('%.init$', '')
 local execute = vim.api.nvim_command
 local fn = vim.fn
-
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-
 if fn.empty(fn.glob(install_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
   execute 'packadd packer.nvim'
@@ -83,7 +81,7 @@ return require('packer').startup(function(use)
   -- General Plugins
 --  use 'windwp/nvim-autopairs'
 --  use 'tjdevries/colorbuddy.nvim'
-  use 'bkegley/gloombuddy'
+--  use 'bkegley/gloombuddy'
   use 'tpope/vim-surround'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
@@ -106,5 +104,4 @@ return require('packer').startup(function(use)
 --  use 'sheerun/vim-polyglot'
 end)
 
---require(current_path .. '.config.nv-tree')
-
+require(smithwebdev.plugins.config.nv-tree)
