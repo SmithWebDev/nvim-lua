@@ -64,4 +64,3 @@ o.clipboard='unnamedplus'
 
 
 vim.cmd('syntax on')
-vim.g.colors_name='gloombuddy'
