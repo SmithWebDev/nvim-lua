@@ -83,7 +83,8 @@ return require('packer').startup(function(use)
   -- General Plugins
 --  use 'windwp/nvim-autopairs'
 --  use 'tjdevries/colorbuddy.nvim'
---  use 'bkegley/gloombuddy'
+  use 'bkegley/gloombuddy'
+  use 'tpope/vim-surround'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'
@@ -106,4 +107,4 @@ return require('packer').startup(function(use)
 end)
 
 --require(current_path .. '.config.nv-tree')
---print(current_path)
+
