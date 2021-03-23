@@ -1,4 +1,3 @@
-local current_path = (...):gsub('%.init$', '')
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -15,4 +14,3 @@ return require('packer').startup(function()
   use 'tpope/vim-endwise'
 end)
 
-require(current_path .. 'config.nv-tree')
