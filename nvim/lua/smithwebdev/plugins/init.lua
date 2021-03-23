@@ -15,4 +15,4 @@ return require('packer').startup(function()
   use 'tpope/vim-endwise'
 end)
 
-require(current_path .. 'nv-tree')
+require(current_path .. 'config.nv-tree')
