@@ -12,7 +12,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 --
 --  -- Lua Guide Info
---  use 'nanotee/nvim-lua-guide'
+  use 'nanotee/nvim-lua-guide'
 --
   -- AutoCompletion
 --  use 'hrsh7th/nvim-compe'
@@ -26,38 +26,39 @@ return require('packer').startup(function()
 --  use 'rubyide/vscode-ruby'
 
   -- LSP
---  use 'neovim/nvim-lspconfig'
+  use 'neovim/nvim-lspconfig'
 --  use 'glepnir/lspsaga.nvim'
 --  use 'onsails/lspkind-nvim'
 --  use 'kosayoda/nvim-lightbulb'
---  use 'kabouzeid/nvim-lspinstall'
---  use 'nvim-lua/lsp-status.nvim'
+  use 'kabouzeid/nvim-lspinstall'
+  use 'nvim-lua/completion-nvim'
+  use 'nvim-lua/lsp-status.nvim'
 --  use 'creativenull/diagnosticls-nvim'--
 
   -- Ruby/ Rails
---  use 'tpope/vim-endwise'
---  use 'tpope/vim-rails'
+  use 'tpope/vim-endwise'
+  use 'tpope/vim-rails'
   
 --  -- Treesitter
---  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'sheerun/vim-polyglot'
 --  use 'nvim-treesitter/nvim-treesitter-refactor'
 --  use 'nvim-treesitter/playground'
 --
 --  -- Status Line and Bufferline
---  use 'glepnir/galaxyline.nvim'
+  use 'glepnir/galaxyline.nvim'
 --  use 'romgrk/barbar.nvim'
 --
 --  -- Icons
---  use 'kyazdani42/nvim-web-devicons'
---  use 'ryanoasis/vim-devicons'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
 --
---  -- Telescope
---  use 'nvim-telescope/telescope.nvim'
---  use 'nvim-lua/plenary.nvim'
---  use 'nvim-lua/popup.nvim'
---  use 'nvim-telescope/telescope-fzy-native.nvim'
---  use 'nvim-telescope/telescope-media-files.nvim'
---
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope-fzy-native.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
 
 --  -- Git
 --  use 'TimUntersberger/neogit'
@@ -75,8 +76,11 @@ return require('packer').startup(function()
 --  use 'gennaro-tedesco/nvim-jqx'
 --  use 'turbio/bracey.vim'
 --
---  -- Registers
+--  -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
+  use 'kshenoy/vim-signature'
+
+
 --
   -- General Plugins
 --  use 'windwp/nvim-autopairs'
@@ -101,5 +105,4 @@ return require('packer').startup(function()
 --  use 'andymass/vim-matchup'
 --  use 'phaazon/hop.nvim'
 --  use 'tpope/vim-sleuth'
---  use 'sheerun/vim-polyglot'
 end)

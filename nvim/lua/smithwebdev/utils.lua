@@ -1,3 +1,5 @@
+require 'smithwebdev.settings'
+require 'smithwebdev.plugins'
 local M = {}
 
 -- Set global or buffer key map
@@ -51,5 +53,4 @@ function M.toggle_conceal()
     vim.wo.conceallevel = 2
   end
 end
-
 return M

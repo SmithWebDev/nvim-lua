@@ -75,7 +75,9 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 -- =====================================
 utils.keymap('n', '<leader>va', ':e $VIMA<CR>')
 utils.keymap('n', '<leader>vc', ':e $VIMC<CR>')
-utils.keymap('n', '<leader>vi', ':luafile $VIM/init.lua<CR>')
+utils.keymap('n', '<leader>vi', ':luafile $HOME/dev/nvim-lua/nvim/init.lua<CR>')
 utils.keymap('n', '<leader>vm', ':e $VIMM<CR>')
+utils.keymap('n', '<leader>vp', ':e $VIMP<CR>')
 utils.keymap('n', '<leader>vr', ':luafile %<CR>')
+
 

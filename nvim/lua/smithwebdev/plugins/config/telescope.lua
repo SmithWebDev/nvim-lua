@@ -1,3 +1,5 @@
+require 'smithwebdev.utils'
+
 local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {
